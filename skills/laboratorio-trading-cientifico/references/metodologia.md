@@ -33,5 +33,5 @@ Declara N esperado (conteo ciego de señales) y el efecto mínimo detectable al 
 - **Órdenes límite:** sufren selección adversa (se llenan sobre todo cuando el precio sigue en contra).
 - **El volumen de un CFD no es el volumen del mercado.**
 - **La gestión no crea ventaja:** si tras la entrada el precio no tiene estructura, parciales, time-stops y trailing solo redistribuyen el mismo E[R]. Mide primero si hay estructura (p. ej. P(gana | no alcanzó +0.6R en n velas)).
-- **Ventajas brutas pequeñas** (< 0.05R) desaparecen con los costes y el swap de los CFD cuando se mantienen posiciones varios días.
+- **Las ventajas brutas pequeñas desaparecen con los costes y el swap de los CFD.** Ejemplo medido: bruto +0,039 R por operación frente a costes ≈ 0,06 R (spread, comisión y swap) → neto −0,018 R con 7 756 operaciones; resta siempre los costes reales antes de celebrar un bruto positivo.
 - **Métricas de resultado calculadas en la ventana de juicio** la contaminan: diagnostica solo en desarrollo.

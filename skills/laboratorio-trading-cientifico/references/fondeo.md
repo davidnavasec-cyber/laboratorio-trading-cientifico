@@ -2,7 +2,7 @@
 
 ## La economía
 - El reto se comporta como una **opción**: pérdida acotada a la cuota (a menudo reembolsable con el primer retiro), ganancia proporcional al tamaño de la cuenta.
-- Consecuencia: el valor esperado por cuota puede ser positivo con una ventaja neta por operación ligeramente negativa (en nuestras simulaciones, el umbral rondaba −0.05R a −0.1R). Ese valor es del contrato; dilo siempre así.
+- Consecuencia: el valor esperado por cuota puede ser positivo con una ventaja neta por operación ligeramente negativa (en nuestras simulaciones con una cartera concreta, el valor esperado se anulaba alrededor de −0,05 R de ventaja neta). Ese valor es del contrato; dilo siempre así.
 - Con ventaja cero, la probabilidad de alcanzar el objetivo antes que el límite depende de las distancias (≈ límite / (objetivo + límite) por fase), no del riesgo por operación; el riesgo cambia sobre todo la **velocidad**.
 - Decide por **beneficio esperado a 12 y 24 meses** (con recompra de retos), probabilidad de pérdida y percentiles, simulando con Monte Carlo las reglas reales.
 - La **inactividad** y la frecuencia mandan: muchas cuentas se pierden por tiempo, no por pérdidas.

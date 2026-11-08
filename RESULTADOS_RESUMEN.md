@@ -14,7 +14,7 @@ Resumen de los hallazgos principales de un laboratorio real de trading algorítm
 3. **Una mejora de desarrollo se encoge en el juicio.** En el caso estudiado, +0,10 R en desarrollo se redujo a +0,03 R fuera de muestra. Quien planifica con la cifra de desarrollo se engaña.
 4. **La única señal con confirmación** fue una asimetría de impacto medida con el lado agresor real de datos de **futuros**; no se traslada a CFD, cuyo volumen no equivale al de los futuros.
 5. **La gestión de la operación (parciales, trailing, time-stop) no crea ventaja:** variación ≈ 0 frente a la entrada y salida base.
-6. **Los costes mandan.** Spread, comisión y swap reales pueden ser una fracción grande de R; con objetivos pequeños, el bruto no alcanza.
+6. **Los costes mandan.** Spread, comisión y swap reales pueden ser una fracción grande de R: un bruto de +0,039 R por operación frente a costes de ≈ 0,06 R dejó la estrategia en −0,018 R neto (N 7 756).
 7. **Lo que el ojo ve no se convierte en regla.** Los ejemplos elegidos a mano dieron resultados negativos en desarrollo al formalizarlos; un momento puede ser «especial» (más volatilidad) sin dirección.
 8. **El contrato de fondeo puede tener valor esperado positivo sin ventaja de la estrategia** (pérdida acotada a la cuota, ganancia proporcional). Es valor del *contrato*, no del método. Con presupuesto pequeño, varios intentos baratos pueden superar a un producto «ilimitado» más caro; la inactividad, más que la pérdida, mata los intentos.
 9. **Muchos «no» son «no concluyente».** Con pocas operaciones no hay potencia: el laboratorio lo declara en lugar de convertirlo en un sí o un no.

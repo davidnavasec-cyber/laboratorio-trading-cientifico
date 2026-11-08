@@ -9,8 +9,8 @@ Un laboratorio personal de investigación de trading algorítmico cuyo objetivo 
 
 ### Tres hallazgos destacados
 1. **El reto de fondeo se comporta como una opción.** La pérdida está acotada a la cuota y la ganancia no: en nuestras simulaciones el valor esperado por cuota seguía siendo positivo hasta una ventaja neta por operación de ≈ −0,05 R. Ese valor es **del contrato, no de la estrategia**.
-2. **Los gatillos de temporalidad baja no superan a entrar al azar del lado de la tendencia** (temporalidad alta) en oro, índices y forex, con las mismas salidas y la misma frecuencia: la poca información está en la dirección y el gatillo solo añade costes.
-3. **Los costes y el swap de los CFD anulan ventajas pequeñas.** Ejemplo medido: una estrategia de tendencia diversificada con Sharpe +0,23 bruto pasó a **−0,41 neto**; la tendencia aportaba +0,91 %/año y el swap restaba −2,75 %/año. Y una mejora de +0,10 R en desarrollo se encogió a +0,03 R en el juicio.
+2. **Los gatillos de temporalidad baja no superan a entrar al azar** con las mismas salidas, en forex, oro e índices (desarrollo, costes reales). Forex: un gatillo M15 con contexto D1+H4 dio −0,030 R neto (N 989) frente a +0,011 R de entrar al azar del lado en que coinciden D1 y H4 (p = 0,94). Oro: un gatillo H1 dio −0,017 R frente a +0,011 R del azar del mismo lado (percentil 95 del azar +0,089; placebo de dirección p = 0,33). Índices: un gatillo de inversión de FVG dio −0,185 R (N 56; placebo de dirección p = 0,51; azar en la ventana p = 0,98). La poca información está en la dirección; el gatillo solo añade costes.
+3. **Los costes y el swap anulan las ventajas pequeñas.** Una estrategia de gatillo simple aplicada a una cartera multiactivo en H4 (N 7 756) tenía un bruto de +0,039 R por operación y unos costes de ≈ 0,06 R: neto −0,018 R. Del mismo modo, una tendencia diversificada con Sharpe +0,23 bruto pasó a **−0,41 neto** (la tendencia aportaba +0,91 %/año y el swap restaba −2,75 %/año). Y una mejora de +0,10 R en desarrollo se encogió a +0,03 R en el juicio.
 
 ## Qué demuestra
 - Pre-registro sellado (sha256) antes de calcular resultados, y libro de intentos para corregir por pruebas múltiples.
@@ -28,7 +28,7 @@ Un laboratorio personal de investigación de trading algorítmico cuyo objetivo 
 | [`herramientas/escaner_secretos.py`](herramientas/escaner_secretos.py) | Escáner de secretos usado antes de cada commit. |
 
 ## Cómo usar la skill
-- **Descarga lista:** archivo `.skill` en la [release v1.0](https://github.com/davidnavasec-cyber/laboratorio-trading-cientifico/releases/tag/v1.0).
+- **Descarga lista:** archivo `.skill` en la [release v1.0.1](https://github.com/davidnavasec-cyber/laboratorio-trading-cientifico/releases/tag/v1.0.1).
 - **Claude Code:** copia `skills/laboratorio-trading-cientifico/` en `~/.claude/skills/` (o en `.claude/skills/` de tu proyecto).
 - **Claude.ai:** sube el `.skill` de la release en la configuración de skills (si tu plan lo permite).
 - Pide, por ejemplo: «Valida esta idea de trading con el método del laboratorio» y la skill propondrá ficha, pre-registro, controles y potencia.
@@ -59,8 +59,8 @@ A personal research lab for algorithmic trading built around one aim: **not fool
 
 ### Three headline findings
 1. **A prop-firm challenge behaves like an option.** Loss is capped at the fee while upside is not: in our simulations expected value per fee stayed positive down to a net edge per trade of ≈ −0.05 R. That value belongs to **the contract, not the strategy**.
-2. **Low-timeframe triggers do not beat random entry on the trend side** (higher timeframe) in gold, indices and forex, with the same exits and frequency: the little information there is lies in direction, and the trigger only adds costs.
-3. **CFD costs and swap wipe out small edges.** Measured example: a diversified trend strategy with a gross Sharpe of +0.23 turned into **−0.41 net**; trend earned +0.91%/yr while swap cost −2.75%/yr. And a +0.10 R improvement in development shrank to +0.03 R in the final trial.
+2. **Low-timeframe triggers do not beat random entry** with the same exits, in forex, gold and indices (development sample, real costs). Forex: an M15 trigger with D1+H4 context returned −0.030 R net (N 989) versus +0.011 R for random entry on the side where D1 and H4 agree (p = 0.94). Gold: an H1 trigger returned −0.017 R versus +0.011 R for random same-side entry (95th percentile of random +0.089; direction-placebo p = 0.33). Indices: an inverse-FVG trigger returned −0.185 R (N 56; direction-placebo p = 0.51; random-in-window p = 0.98). The little information there is lies in direction; the trigger only adds costs.
+3. **Costs and swap wipe out small edges.** A simple-trigger strategy applied to a multi-asset H4 portfolio (N 7,756) had a gross edge of +0.039 R per trade against costs of ≈ 0.06 R: net −0.018 R. Likewise a diversified trend strategy with a gross Sharpe of +0.23 turned into **−0.41 net** (trend earned +0.91%/yr while swap cost −2.75%/yr). And a +0.10 R improvement in development shrank to +0.03 R in the final trial.
 
 ## What it demonstrates
 - Sealed pre-registration (sha256) before computing results, and an attempts ledger to correct for multiple testing.
@@ -78,7 +78,7 @@ A personal research lab for algorithmic trading built around one aim: **not fool
 | [`herramientas/escaner_secretos.py`](herramientas/escaner_secretos.py) | Secret scanner run before every commit. |
 
 ## Using the skill
-- **Ready-made download:** `.skill` file in [release v1.0](https://github.com/davidnavasec-cyber/laboratorio-trading-cientifico/releases/tag/v1.0).
+- **Ready-made download:** `.skill` file in [release v1.0.1](https://github.com/davidnavasec-cyber/laboratorio-trading-cientifico/releases/tag/v1.0.1).
 - **Claude Code:** copy `skills/laboratorio-trading-cientifico/` into `~/.claude/skills/` (or your project's `.claude/skills/`).
 - **Claude.ai:** upload the release `.skill` in skill settings (if your plan allows).
 - Ask, e.g., "Validate this trading idea with the lab method" and the skill will propose an idea sheet, pre-registration, controls and power.
