@@ -9,7 +9,7 @@ REGLAS = [
     ('material del profesor / estrategias del piloto', r'(?i)valentini|maxwell|carta\s+magna|hotmart|sofea|venom\s?17|m15\s*gap|gotobi|bernd'),
     ('firma de fondeo concreta', r'(?i)spice\s?prop|ftmo|apex\s*trader|topstep|tradeify'),
     ('numero de cuenta', r'\b80813\b'),
-    ('ruta personal', r'/Users/|C:\\\\Users|davidnavas'),
+    ('ruta personal', r'/Users/|C:\\\\Users|davidnavas(?!ec-cyber)'),
     ('correo', r'[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}'),
     ('telegram', r'(?i)telegram_(token|chat_id)\s*=|api\.telegram\.org/bot'),
     ('capturas / saldos', r'(?i)\bsaldo\s+\d|equidad\s+\d|balance\s*[:=]\s*\d'),

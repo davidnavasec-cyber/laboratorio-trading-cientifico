@@ -7,12 +7,17 @@
 ## Qué es
 Un laboratorio personal de investigación de trading algorítmico cuyo objetivo es **no engañarse**: casi todo lo que parece ventaja (un buen mes en el probador, la mejor de mil configuraciones, un ejemplo elegido a ojo) resulta ser ruido, coste o selección. Este repositorio publica el **método** y la **skill** para Claude que lo aplica.
 
+### Tres hallazgos destacados
+1. **El reto de fondeo se comporta como una opción.** La pérdida está acotada a la cuota y la ganancia no: en nuestras simulaciones el valor esperado por cuota seguía siendo positivo hasta una ventaja neta por operación de ≈ −0,05 R. Ese valor es **del contrato, no de la estrategia**.
+2. **Los gatillos de temporalidad baja no superan a entrar al azar del lado de la tendencia** (temporalidad alta) en oro, índices y forex, con las mismas salidas y la misma frecuencia: la poca información está en la dirección y el gatillo solo añade costes.
+3. **Los costes y el swap de los CFD anulan ventajas pequeñas.** Ejemplo medido: una estrategia de tendencia diversificada con Sharpe +0,23 bruto pasó a **−0,41 neto**; la tendencia aportaba +0,91 %/año y el swap restaba −2,75 %/año. Y una mejora de +0,10 R en desarrollo se encogió a +0,03 R en el juicio.
+
 ## Qué demuestra
 - Pre-registro sellado (sha256) antes de calcular resultados, y libro de intentos para corregir por pruebas múltiples.
 - Controles placebo (dirección pareada y entrada al azar), juicio único fuera de muestra, costes reales (spread, comisión, swap).
 - Economía del fondeo (prop firms) modelada con Monte Carlo con las reglas reales.
 - Cómo llevar lo que sobrevive a un EA de MetaTrader con módulo de riesgo, modo sombra, validador independiente y automatización.
-- ≈ 964 000 configuraciones contadas en 123 misiones: casi todo falló, y eso está documentado ([resumen](RESULTADOS_RESUMEN.md)).
+- ≈ 964 000 configuraciones en 123 misiones (la mayor parte, en una búsqueda exhaustiva de reglas): casi todo falló, y eso está documentado ([resumen](RESULTADOS_RESUMEN.md)).
 
 ## Qué hay aquí
 | Archivo | Contenido |
@@ -23,23 +28,21 @@ Un laboratorio personal de investigación de trading algorítmico cuyo objetivo 
 | [`herramientas/escaner_secretos.py`](herramientas/escaner_secretos.py) | Escáner de secretos usado antes de cada commit. |
 
 ## Cómo usar la skill
+- **Descarga lista:** archivo `.skill` en la [release v1.0](https://github.com/davidnavasec-cyber/laboratorio-trading-cientifico/releases/tag/v1.0).
 - **Claude Code:** copia `skills/laboratorio-trading-cientifico/` en `~/.claude/skills/` (o en `.claude/skills/` de tu proyecto).
-- **Claude.ai:** empaqueta la carpeta como `.skill` y súbela en la configuración de skills (si tu plan lo permite).
+- **Claude.ai:** sube el `.skill` de la release en la configuración de skills (si tu plan lo permite).
 - Pide, por ejemplo: «Valida esta idea de trading con el método del laboratorio» y la skill propondrá ficha, pre-registro, controles y potencia.
 
-## Productos de pago (opcionales)
-Este repositorio es gratuito y completo en sí mismo. Además, hay tres productos con licencia personal (sin redistribución) y sin datos de mercado:
-- 📘 **Manual de resultados** — método, familias probadas con cifras trazables, economía y comparación de productos de fondeo: [ENLACE_TIENDA_MANUAL]
-- 🛠 **Herramienta de datos** — cargador/descargador portable con manifiesto y guía de problemas conocidos: [ENLACE_TIENDA_HERRAMIENTA_DATOS]
-- 🧩 **Plantillas educativas de EAs** — módulo de riesgo de fondeo, modo sombra, validador, exportador, informes y un EA de ejemplo **sin ventaja**: [ENLACE_TIENDA_PLANTILLAS]
-- 🎁 **Paquete de los tres:** [ENLACE_TIENDA_PAQUETE]
+## Próximamente
+Este repositorio es gratuito y completo en sí mismo. Más adelante habrá productos opcionales con licencia personal, sin datos de mercado ni estrategias: un manual de resultados, una herramienta de datos y plantillas educativas de EAs.
 
-Ninguno incluye estrategias rentables, señales ni datos de terceros.
+## Sobre el autor
+**David Antonio Navas** — estudiante de Tecnología en IA. [ENLACE_LINKEDIN]
 
 ## Licencias
 - Código: **MIT** ([`LICENSE`](LICENSE)).
 - Textos: **CC BY-NC 4.0** ([`LICENSE-TEXTOS.md`](LICENSE-TEXTOS.md)).
-- Los productos de pago llevan su propia licencia personal.
+- Los futuros productos de pago llevarán su propia licencia personal.
 
 ## Aviso
 Este repositorio es material educativo y técnico, **no asesoramiento financiero, de inversión ni de trading**. Sin garantía de ningún tipo. No hay relación con ninguna firma de fondeo, bróker o proveedor de datos. Más en [`AVISO_LEGAL.md`](AVISO_LEGAL.md).
@@ -54,12 +57,17 @@ Este repositorio es material educativo y técnico, **no asesoramiento financiero
 ## What it is
 A personal research lab for algorithmic trading built around one aim: **not fooling yourself**. Nearly everything that looks like an edge (a good month in the strategy tester, the best of a thousand configurations, an eyeballed example) turns out to be noise, cost or selection. This repository publishes the **method** and the **Claude skill** that applies it. (Documents are in Spanish; this section summarises them.)
 
+### Three headline findings
+1. **A prop-firm challenge behaves like an option.** Loss is capped at the fee while upside is not: in our simulations expected value per fee stayed positive down to a net edge per trade of ≈ −0.05 R. That value belongs to **the contract, not the strategy**.
+2. **Low-timeframe triggers do not beat random entry on the trend side** (higher timeframe) in gold, indices and forex, with the same exits and frequency: the little information there is lies in direction, and the trigger only adds costs.
+3. **CFD costs and swap wipe out small edges.** Measured example: a diversified trend strategy with a gross Sharpe of +0.23 turned into **−0.41 net**; trend earned +0.91%/yr while swap cost −2.75%/yr. And a +0.10 R improvement in development shrank to +0.03 R in the final trial.
+
 ## What it demonstrates
 - Sealed pre-registration (sha256) before computing results, and an attempts ledger to correct for multiple testing.
 - Placebo controls (paired direction and random entry), a single out-of-sample trial, real costs (spread, commission, swap).
 - Prop-firm economics modelled with Monte Carlo using the real rules.
 - How to take what survives to a MetaTrader EA with a risk module, shadow mode, an independent validator and automation.
-- ≈ 964,000 configurations counted across 123 missions: nearly all failed, and that is documented ([summary](RESULTADOS_RESUMEN.md), Spanish).
+- ≈ 964,000 configurations across 123 missions (most of them in one exhaustive rule search): nearly all failed, and that is documented ([summary](RESULTADOS_RESUMEN.md), Spanish).
 
 ## What is here
 | File | Contents |
@@ -70,21 +78,19 @@ A personal research lab for algorithmic trading built around one aim: **not fool
 | [`herramientas/escaner_secretos.py`](herramientas/escaner_secretos.py) | Secret scanner run before every commit. |
 
 ## Using the skill
+- **Ready-made download:** `.skill` file in [release v1.0](https://github.com/davidnavasec-cyber/laboratorio-trading-cientifico/releases/tag/v1.0).
 - **Claude Code:** copy `skills/laboratorio-trading-cientifico/` into `~/.claude/skills/` (or your project's `.claude/skills/`).
-- **Claude.ai:** package the folder as a `.skill` and upload it in skill settings (if your plan allows).
+- **Claude.ai:** upload the release `.skill` in skill settings (if your plan allows).
 - Ask, e.g., "Validate this trading idea with the lab method" and the skill will propose an idea sheet, pre-registration, controls and power.
 
-## Paid products (optional)
-This repository is free and complete on its own. There are also three products under a personal licence (no redistribution) with no market data:
-- 📘 **Results manual** — method, tested families with traceable figures, prop-firm economics and product comparison (Spanish): [STORE_LINK_MANUAL]
-- 🛠 **Data tool** — portable loader/downloader with manifest and known-issues guide: [STORE_LINK_DATA_TOOL]
-- 🧩 **Educational EA templates** — prop-firm risk module, shadow mode, validator, exporter, reports and an example EA **with no edge**: [STORE_LINK_TEMPLATES]
-- 🎁 **Bundle of all three:** [STORE_LINK_BUNDLE]
+## Coming soon
+This repository is free and complete on its own. Optional products under a personal licence, with no market data or strategies, will follow: a results manual, a data tool and educational EA templates.
 
-None includes profitable strategies, signals or third-party data.
+## About the author
+**David Antonio Navas** — AI Technology student. [ENLACE_LINKEDIN]
 
 ## Licences
-- Code: **MIT** ([`LICENSE`](LICENSE)). Texts: **CC BY-NC 4.0** ([`LICENSE-TEXTOS.md`](LICENSE-TEXTOS.md)). Paid products carry their own personal licence.
+- Code: **MIT** ([`LICENSE`](LICENSE)). Texts: **CC BY-NC 4.0** ([`LICENSE-TEXTOS.md`](LICENSE-TEXTOS.md)). Future paid products will carry their own personal licence.
 
 ## Notice
 Educational and technical material, **not financial, investment or trading advice**. No warranty of any kind. No affiliation with any prop firm, broker or data vendor. See [`AVISO_LEGAL.md`](AVISO_LEGAL.md).

@@ -25,4 +25,4 @@ Resumen de los hallazgos principales de un laboratorio real de trading algorítm
 
 ## Para ir más lejos
 - Método reproducible: carpeta [`skills/laboratorio-trading-cientifico/`](skills/laboratorio-trading-cientifico/).
-- Manual de resultados (tabla completa y cifras trazables): [ENLACE_TIENDA_MANUAL].
+- Próximamente: un *Manual de resultados* con la tabla completa y las cifras trazables.

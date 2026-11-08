@@ -1,6 +1,6 @@
 # Arquitectura del laboratorio
 
-Cómo está montado un laboratorio de investigación de trading algorítmico **diseñado para no engañarse**. Describe piezas y flujos; no incluye código privado, datos, ni estrategias. Las piezas con código reutilizable se venden aparte (enlaces en el [README](README.md)).
+Cómo está montado un laboratorio de investigación de trading algorítmico **diseñado para no engañarse**. Describe piezas y flujos; no incluye código privado, datos, ni estrategias. Las piezas con código reutilizable llegarán como productos aparte (ver «Próximamente» en el [README](README.md)).
 
 > Material educativo. No es asesoramiento financiero. Ver [AVISO_LEGAL.md](AVISO_LEGAL.md). Textos bajo CC BY-NC 4.0 (ver [LICENSE-TEXTOS.md](LICENSE-TEXTOS.md)).
 
