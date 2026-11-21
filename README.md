@@ -33,16 +33,55 @@ Un laboratorio personal de investigación de trading algorítmico cuyo objetivo 
 - **Claude.ai:** sube el `.skill` de la release en la configuración de skills (si tu plan lo permite).
 - Pide, por ejemplo: «Valida esta idea de trading con el método del laboratorio» y la skill propondrá ficha, pre-registro, controles y potencia.
 
-## Próximamente
-Este repositorio es gratuito y completo en sí mismo. Más adelante habrá productos opcionales con licencia personal, sin datos de mercado ni estrategias: un manual de resultados, una herramienta de datos y plantillas educativas de EAs.
+## Comprar
+Todos los productos son material educativo y técnico, con licencia personal y sin datos de mercado. **Pago en USDT o USDC, mismo precio** (otras vías en dólares por correo). Entrega por correo con el archivo adjunto.
+
+| Producto | Qué es | Precio (USDT / USDC) |
+|---|---|---:|
+| 📘 **Manual de resultados** (PDF, español) | Método y economía del fondeo; cada cifra verificada | **25** |
+| 🛠 **Herramienta de datos** (Python) | Cargar, verificar y convertir velas M1 → H1/H4/D1; sin datos | **39** |
+| 🧩 **Plantillas educativas de EAs** (MQL5) | Módulo de riesgo de fondeo, modo sombra y autopruebas; ejemplo sin ventaja | **49** |
+| 🎁 **Paquete completo** | Los tres · ahorras 28 | **85** |
+
+**Contacto:** danc.ventas@gmail.com
+
+### Cómo pagar
+**Pago en USDT o USDC.** No se publica ninguna dirección: te la enviamos por correo en cada pedido.
+1) Escribe a danc.ventas@gmail.com con el **producto** que quieres. 2) Te respondemos con el **precio**, el **token** (USDT o USDC), la **red** y la **dirección de pago** de ese pedido. 3) Pagas y nos envías el **hash** de la transacción. 4) Comprobamos que llegó el **importe completo** y te enviamos el archivo y la licencia por correo.
+
+### Redes recomendadas
+| Token | Recomendadas | También se acepta | Nunca |
+|---|---|---|---|
+| **USDT** | Polygon · BNB Chain (BEP-20) | Ethereum (ERC-20): el gas, más caro, lo paga el cliente | Tron (TRC-20) |
+| **USDC** | Polygon · BNB Chain (BEP-20) | Ethereum (ERC-20): el gas, más caro, lo paga el cliente | Tron (TRC-20) |
+
+Polygon y BNB Chain son baratas y rápidas. **La red exacta y la dirección se confirman siempre por correo antes de pagar.**
+
+> **Antes de pagar**
+> 1. Aceptamos **solo USDT o USDC**, en la red que te indiquemos por correo. **No envíes por Tron (TRC-20)**. Otro token u otra red puede perder los fondos de forma **irrecuperable**.
+> 2. Usa **únicamente la dirección que te enviamos por correo para tu pedido**; ninguna otra página ni mensaje la publica. Compárala carácter a carácter.
+> 3. Las comisiones de red (y las de tu exchange) corren por tu cuenta: debe llegar el **precio completo**.
+> 4. Los pagos en blockchain son **irreversibles**.
+
+**Otras vías, solo por correo y bajo pedido:** transferencia entre usuarios de Takenos, o ACH desde una cuenta bancaria de EE. UU. Pídelas en tu primer correo; no se aceptan Wire, SWIFT ni tarjeta.
+
+### Condiciones comunes
+- Entrega por **correo con el archivo adjunto**, normalmente en 24 horas hábiles tras comprobar que llegó el pago completo (plazo orientativo).
+- **Sin reembolso una vez descargado, salvo archivo dañado o no conforme a la descripción:** lo sustituimos o devolvemos el importe (en el mismo token, menos comisiones de red).
+- Las correcciones de errores de la versión 1.x son gratuitas para quien ya compró.
+- Pagos incompletos, de más o por una red equivocada: te contactaremos; no se entrega hasta cubrir el importe.
+- Licencia personal (una por persona; para empresas o equipos, escribe al correo). Sin redistribución.
+- Material educativo y técnico; **no es asesoramiento financiero**, no promete rentabilidad y no incluye estrategias ni señales. Operar conlleva riesgo de pérdida total.
+
+**Probado en** macOS con Python 3.9 y 3.14 (herramienta y plantillas); Linux y Windows no probados aún.
 
 ## Sobre el autor
-**David Antonio Navas** — estudiante de Tecnología en IA. [ENLACE_LINKEDIN]
+**David Antonio Navas** — estudiante de Tecnología en IA. Contacto: danc.ventas@gmail.com
 
 ## Licencias
 - Código: **MIT** ([`LICENSE`](LICENSE)).
 - Textos: **CC BY-NC 4.0** ([`LICENSE-TEXTOS.md`](LICENSE-TEXTOS.md)).
-- Los futuros productos de pago llevarán su propia licencia personal.
+- Los productos de pago llevan su propia licencia personal.
 
 ## Aviso
 Este repositorio es material educativo y técnico, **no asesoramiento financiero, de inversión ni de trading**. Sin garantía de ningún tipo. No hay relación con ninguna firma de fondeo, bróker o proveedor de datos. Más en [`AVISO_LEGAL.md`](AVISO_LEGAL.md).
@@ -83,14 +122,53 @@ A personal research lab for algorithmic trading built around one aim: **not fool
 - **Claude.ai:** upload the release `.skill` in skill settings (if your plan allows).
 - Ask, e.g., "Validate this trading idea with the lab method" and the skill will propose an idea sheet, pre-registration, controls and power.
 
-## Coming soon
-This repository is free and complete on its own. Optional products under a personal licence, with no market data or strategies, will follow: a results manual, a data tool and educational EA templates.
+## Buy
+All products are educational and technical material under a personal licence, with no market data. **Pay in USDT or USDC, same price** (other dollar options by email). Delivery by email with the file attached.
+
+| Product | What it is | Price (USDT / USDC) |
+|---|---|---:|
+| 📘 **Results Manual** (PDF, in Spanish) | Method and prop-firm economics; every figure verified | **25** |
+| 🛠 **Data Tool** (Python) | Load, verify and convert M1 candles → H1/H4/D1; no data included | **39** |
+| 🧩 **Educational EA Templates** (MQL5) | Prop-firm risk module, shadow mode and self-tests; no-edge example | **49** |
+| 🎁 **Complete Bundle** | All three · you save 28 | **85** |
+
+**Contact:** danc.ventas@gmail.com
+
+### How to pay
+**Pay in USDT or USDC.** No payment address is published: we email it to you for each order.
+1) Email danc.ventas@gmail.com with the **product** you want. 2) We reply with the **price**, the **token** (USDT or USDC), the **network** and the **payment address** for that order. 3) You pay and send us the transaction **hash**. 4) We check that the **full amount** arrived and email you the file and the licence.
+
+### Recommended networks
+| Token | Recommended | Also accepted | Never |
+|---|---|---|---|
+| **USDT** | Polygon · BNB Chain (BEP-20) | Ethereum (ERC-20): the higher gas fee is paid by the customer | Tron (TRC-20) |
+| **USDC** | Polygon · BNB Chain (BEP-20) | Ethereum (ERC-20): the higher gas fee is paid by the customer | Tron (TRC-20) |
+
+Polygon and BNB Chain are cheap and fast. **The exact network and address are always confirmed by email before you pay.**
+
+> **Before paying**
+> 1. We accept **USDT or USDC only**, on the network we tell you by email. **Do not send over Tron (TRC-20)**. Another token or network may lose the funds **irrecoverably**.
+> 2. Use **only the address we email you for your order**; no other page or message publishes it. Compare it character by character.
+> 3. Network fees (and your exchange's fees) are on you: the **full price** must arrive.
+> 4. Blockchain payments are **irreversible**.
+
+**Other options, by email on request only:** transfer between Takenos users, or ACH from a US bank account. Ask for them in your first email; no wires, SWIFT or cards.
+
+### Common terms
+- Delivery by **email with the file attached**, usually within 24 business hours after we confirm the full payment arrived (indicative).
+- **No refunds once downloaded, unless the file is damaged or does not match the description:** we will replace it or refund you (in the same token, minus network fees).
+- Bug fixes for version 1.x are free for existing buyers.
+- Underpayments, overpayments or wrong-network payments: we will contact you; nothing is delivered until the amount is covered.
+- Personal licence (one per person; for companies or teams, email us). No redistribution.
+- Educational and technical material; **not financial advice**, no promise of profitability, no strategies or signals included. Trading carries a risk of total loss.
+
+**Tested on** macOS with Python 3.9 and 3.14 (tool and templates); Linux and Windows not tested yet.
 
 ## About the author
-**David Antonio Navas** — AI Technology student. [ENLACE_LINKEDIN]
+**David Antonio Navas** — AI Technology student. Contact: danc.ventas@gmail.com
 
 ## Licences
-- Code: **MIT** ([`LICENSE`](LICENSE)). Texts: **CC BY-NC 4.0** ([`LICENSE-TEXTOS.md`](LICENSE-TEXTOS.md)). Future paid products will carry their own personal licence.
+- Code: **MIT** ([`LICENSE`](LICENSE)). Texts: **CC BY-NC 4.0** ([`LICENSE-TEXTOS.md`](LICENSE-TEXTOS.md)). Paid products come with their own personal licence.
 
 ## Notice
 Educational and technical material, **not financial, investment or trading advice**. No warranty of any kind. No affiliation with any prop firm, broker or data vendor. See [`AVISO_LEGAL.md`](AVISO_LEGAL.md).
