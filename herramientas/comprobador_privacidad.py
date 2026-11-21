@@ -15,6 +15,7 @@ REGLAS = [
     ('capturas / saldos', r'(?i)\bsaldo\s+\d|equidad\s+\d|balance\s*[:=]\s*\d'),
 ]
 PROPIOS = ('herramientas/comprobador_privacidad.py',)  # contiene las reglas
+CORREO_PUBLICO = re.compile(r'(?<![A-Za-z0-9._%+-])danc\.ventas@gmail\.com(?![A-Za-z0-9-]|\.[A-Za-z])')  # unico correo permitido: correo comercial publico (decision del operador, 2026-11-20)
 
 def main():
     if '--todo' in sys.argv:
@@ -31,8 +32,9 @@ def main():
         if os.path.getsize(p) > 5_000_000: bad.append((rel, 0, 'archivo grande')); continue
         n += 1
         for i, line in enumerate(open(p, errors='ignore'), 1):
+            linea = CORREO_PUBLICO.sub('', line)  # solo esa direccion exacta; cualquier otro correo sigue bloqueado
             for k, r in rx:
-                if r.search(line): bad.append((rel, i, k))
+                if r.search(linea): bad.append((rel, i, k))
     for rel, i, k in bad: print(f'PRIVACIDAD {rel}:{i}: {k}', file=sys.stderr)
     print(f'comprobador de privacidad: {n} archivos revisados, {len(bad)} hallazgos', file=sys.stderr)
     sys.exit(1 if bad else 0)
