@@ -5,7 +5,18 @@
 > ⚠️ **Material educativo. No es asesoramiento financiero** ni promete rentabilidad. Operar con apalancamiento puede hacerte perder todo el capital. Lee el [aviso legal](AVISO_LEGAL.md).
 
 ## Qué es
-Un laboratorio personal de investigación de trading algorítmico cuyo objetivo es **no engañarse**: casi todo lo que parece ventaja (un buen mes en el probador, la mejor de mil configuraciones, un ejemplo elegido a ojo) resulta ser ruido, coste o selección. Este repositorio publica el **método** y la **skill** para Claude que lo aplica.
+Un laboratorio personal de investigación de trading algorítmico cuyo objetivo es **no engañarse**: casi todo lo que parece ventaja (un buen mes en el probador, la mejor de mil configuraciones, un ejemplo elegido a ojo) resulta ser ruido, coste o selección. Este repositorio publica el **método** y la **skill** para Claude que lo aplica, gratis y abiertos.
+
+> ### 🎁 Gratis: la skill del laboratorio
+> Es **gratuita**: se puede usar, copiar y adaptar según las licencias del repositorio (código y `estadistica.py`: **MIT**; textos de la skill: **CC BY-NC 4.0**, es decir, uso libre no comercial con atribución; ver [Licencias](#licencias)). No necesitas comprar nada para usarla.
+>
+> **Instalar en 4 pasos (Claude Code):**
+> 1. Descarga este repositorio (`git clone https://github.com/davidnavasec-cyber/laboratorio-trading-cientifico`) o el archivo `.skill` de la [release v1.0.1](https://github.com/davidnavasec-cyber/laboratorio-trading-cientifico/releases/tag/v1.0.1).
+> 2. Copia la carpeta `skills/laboratorio-trading-cientifico/` en `~/.claude/skills/` (o en `.claude/skills/` de tu proyecto).
+> 3. Abre Claude Code. En Claude.ai, sube el `.skill` en la configuración de skills (si tu plan lo permite).
+> 4. Pide algo relacionado con una idea de trading y la skill se activa sola.
+>
+> **Ejemplo de petición:** «Valida esta idea de trading con el método del laboratorio». La skill propondrá una ficha de la idea, el pre-registro, los controles (placebo de dirección y entrada al azar) y la potencia necesaria.
 
 ### Tres hallazgos destacados
 1. **El reto de fondeo se comporta como una opción.** La pérdida está acotada a la cuota y la ganancia no: en nuestras simulaciones el valor esperado por cuota seguía siendo positivo hasta una ventaja neta por operación de ≈ −0,05 R. Ese valor es **del contrato, no de la estrategia**.
@@ -27,13 +38,9 @@ Un laboratorio personal de investigación de trading algorítmico cuyo objetivo 
 | [`RESULTADOS_RESUMEN.md`](RESULTADOS_RESUMEN.md) | Hallazgos principales en una página. |
 | [`herramientas/escaner_secretos.py`](herramientas/escaner_secretos.py) | Escáner de secretos usado antes de cada commit. |
 
-## Cómo usar la skill
-- **Descarga lista:** archivo `.skill` en la [release v1.0.1](https://github.com/davidnavasec-cyber/laboratorio-trading-cientifico/releases/tag/v1.0.1).
-- **Claude Code:** copia `skills/laboratorio-trading-cientifico/` en `~/.claude/skills/` (o en `.claude/skills/` de tu proyecto).
-- **Claude.ai:** sube el `.skill` de la release en la configuración de skills (si tu plan lo permite).
-- Pide, por ejemplo: «Valida esta idea de trading con el método del laboratorio» y la skill propondrá ficha, pre-registro, controles y potencia.
+## Material opcional (de pago)
+Todo lo anterior es gratis y lo seguirá siendo. Si te resultó útil y quieres profundizar, hay tres materiales opcionales que además apoyan el proyecto.
 
-## Comprar
 Todos los productos son material educativo y técnico, con licencia personal y sin datos de mercado. **Pago en USDT o USDC, mismo precio** (otras vías en dólares por correo). Entrega por correo con el archivo adjunto.
 
 | Producto | Qué es | Precio (USDT / USDC) |
@@ -94,7 +101,18 @@ Este repositorio es material educativo y técnico, **no asesoramiento financiero
 > ⚠️ **Educational material. Not financial advice** and no promise of profitability. Leveraged trading can lose you all your capital. See the [legal notice](AVISO_LEGAL.md).
 
 ## What it is
-A personal research lab for algorithmic trading built around one aim: **not fooling yourself**. Nearly everything that looks like an edge (a good month in the strategy tester, the best of a thousand configurations, an eyeballed example) turns out to be noise, cost or selection. This repository publishes the **method** and the **Claude skill** that applies it. (Documents are in Spanish; this section summarises them.)
+A personal research lab for algorithmic trading built around one aim: **not fooling yourself**. Nearly everything that looks like an edge (a good month in the strategy tester, the best of a thousand configurations, an eyeballed example) turns out to be noise, cost or selection. This repository publishes the **method** and the **Claude skill** that applies it, free and open. (Documents are in Spanish; this section summarises them.)
+
+> ### 🎁 Free: the lab's skill
+> It is **free**: you can use, copy and adapt it under the repository's licences (code and `estadistica.py`: **MIT**; skill texts: **CC BY-NC 4.0**, i.e. free non-commercial use with attribution; see [Licences](#licences)). You do not need to buy anything to use it.
+>
+> **Install in 4 steps (Claude Code):**
+> 1. Download this repository (`git clone https://github.com/davidnavasec-cyber/laboratorio-trading-cientifico`) or the `.skill` file from [release v1.0.1](https://github.com/davidnavasec-cyber/laboratorio-trading-cientifico/releases/tag/v1.0.1).
+> 2. Copy the `skills/laboratorio-trading-cientifico/` folder into `~/.claude/skills/` (or your project's `.claude/skills/`).
+> 3. Open Claude Code. In Claude.ai, upload the `.skill` in skill settings (if your plan allows).
+> 4. Ask about a trading idea and the skill activates by itself.
+>
+> **Example request:** "Validate this trading idea with the lab method". The skill will propose an idea sheet, the pre-registration, the controls (direction placebo and random entry) and the power needed.
 
 ### Three headline findings
 1. **A prop-firm challenge behaves like an option.** Loss is capped at the fee while upside is not: in our simulations expected value per fee stayed positive down to a net edge per trade of ≈ −0.05 R. That value belongs to **the contract, not the strategy**.
@@ -116,13 +134,9 @@ A personal research lab for algorithmic trading built around one aim: **not fool
 | [`RESULTADOS_RESUMEN.md`](RESULTADOS_RESUMEN.md) | Main findings on one page. |
 | [`herramientas/escaner_secretos.py`](herramientas/escaner_secretos.py) | Secret scanner run before every commit. |
 
-## Using the skill
-- **Ready-made download:** `.skill` file in [release v1.0.1](https://github.com/davidnavasec-cyber/laboratorio-trading-cientifico/releases/tag/v1.0.1).
-- **Claude Code:** copy `skills/laboratorio-trading-cientifico/` into `~/.claude/skills/` (or your project's `.claude/skills/`).
-- **Claude.ai:** upload the release `.skill` in skill settings (if your plan allows).
-- Ask, e.g., "Validate this trading idea with the lab method" and the skill will propose an idea sheet, pre-registration, controls and power.
+## Optional paid material
+Everything above is free and will stay free. If you found it useful and want to go deeper, there are three optional materials that also support the project.
 
-## Buy
 All products are educational and technical material under a personal licence, with no market data. **Pay in USDT or USDC, same price** (other dollar options by email). Delivery by email with the file attached.
 
 | Product | What it is | Price (USDT / USDC) |
