@@ -14,6 +14,16 @@ REGLAS = [
     ('telegram', r'(?i)telegram_(token|chat_id)\s*=|api\.telegram\.org/bot'),
     ('capturas / saldos', r'(?i)\bsaldo\s+\d|equidad\s+\d|balance\s*[:=]\s*\d'),
 ]
+# Lista local no versionada (.git/info/terminos_sensibles.txt, un termino por linea, '#' comenta): se suma a las reglas.
+# Los terminos viven solo en este equipo; nunca se escriben en el repositorio.
+def terminos_locales():
+    f = os.path.join(RAIZ, '.git', 'info', 'terminos_sensibles.txt')
+    try:
+        t = [l.strip() for l in open(f, encoding='utf-8') if l.strip() and not l.lstrip().startswith('#')]
+    except OSError:
+        return None
+    return ('termino de la lista local', '(?i)' + '|'.join(re.escape(x) for x in t)) if t else None
+
 PROPIOS = ('herramientas/comprobador_privacidad.py',)  # contiene las reglas
 CORREO_PUBLICO = re.compile(r'(?<![A-Za-z0-9._%+-])danc\.ventas@gmail\.com(?![A-Za-z0-9-]|\.[A-Za-z])')  # unico correo permitido: correo comercial publico (decision del operador, 2026-11-20)
 
@@ -23,7 +33,8 @@ def main():
     else:
         out = subprocess.check_output(['git', 'diff', '--cached', '--name-only', '--diff-filter=ACMR', '-z'], cwd=RAIZ).decode().split('\0')
     bad = []; n = 0
-    rx = [(k, re.compile(p)) for k, p in REGLAS]
+    local = terminos_locales()
+    rx = [(k, re.compile(p)) for k, p in REGLAS + ([local] if local else [])]
     for rel in filter(None, out):
         p = os.path.join(RAIZ, rel)
         if rel in PROPIOS or not os.path.isfile(p) or os.path.islink(p): continue
